@@ -17,3 +17,10 @@
 $(function() {
   window.Dropdown.bind();
 });
+
+/* Reusable 'refresh' pattern */
+$(function() {
+  $('.cf-action-refresh').on('click', function() {
+    location.reload(); return false;
+  });
+});
