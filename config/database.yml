@@ -16,8 +16,8 @@ development:
 # For connecting to the DEV VACOLS Database
 staging:
   adapter: oracle_enhanced
-  username: <%= ENV["VACOLS_USERNAME"] %>
-  password: <%= ENV["VACOLS_PASSWORD"] %>
+  username: <%= ENV["VACOLS_STAGING_USERNAME"] %>
+  password: <%= ENV["VACOLS_STAGING_PASSWORD"] %>
   host: vacols.dev.vaco.va.gov
   port: 1526
   database: BVAP.VACO.VA.GOV
