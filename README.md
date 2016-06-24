@@ -12,6 +12,16 @@ And by default, Rails will run in the development environment, which will mock o
 
 `$ rails s`
 
+### Using Docker in isolation
+#### Building a docker image
+```
+update local gemfile -> docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby:2.3 bundle install --without production staging
+create the image -> docker build -t mattjenks/caseflow-certification .
+```
+#### Running a docker image
+```
+run the image -> docker run -dit --rm --name va-caseflow-cert -P --expose 3001 mattjenks/caseflow-certification
+```
 ## Running Caseflow connected to external depedencies
 To test the app connected to external dependencies follow
 
